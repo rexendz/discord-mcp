@@ -706,9 +706,7 @@ async def edit_role(
         body["hoist"] = hoist
     if mentionable is not None:
         body["mentionable"] = mentionable
-    return await _request(
-        "PATCH", f"/guilds/{_guild_id()}/roles/{role_id}", json=body
-    )
+    return await _request("PATCH", f"/guilds/{_guild_id()}/roles/{role_id}", json=body)
 
 
 @mcp.tool()
@@ -1011,9 +1009,7 @@ async def list_thread_members(
     }
     if after:
         params["after"] = after
-    return await _request(
-        "GET", f"/channels/{thread_id}/thread-members", params=params
-    )
+    return await _request("GET", f"/channels/{thread_id}/thread-members", params=params)
 
 
 @mcp.tool()

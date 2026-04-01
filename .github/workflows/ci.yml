@@ -61,7 +61,7 @@ jobs:
         run: uv sync --all-groups
 
       - name: Run tests
-        run: uv run pytest --tb=short -q
+        run: uv run pytest tests/ --tb=short -q
 
   build:
     name: Build distribution
