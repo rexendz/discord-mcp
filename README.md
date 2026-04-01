@@ -7,6 +7,10 @@
 
 A [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server that exposes the Discord REST API as tools for AI assistants such as GitHub Copilot. Built with [FastMCP](https://github.com/jlowin/fastmcp), it lets any MCP-compatible client send messages, manage channels, moderate members, handle roles, and control threads in a Discord server — all through natural language.
 
+> [!IMPORTANT]
+> **This project was designed and tested exclusively with [VS Code](https://code.visualstudio.com/) and the [GitHub Copilot Chat extension](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat).**
+> It has **not** been tested with other agentic tools or MCP clients (e.g. Claude Code, Cursor, Continue, or any other third-party tool). Compatibility with those environments is not guaranteed and is entirely untested. Use outside of VS Code + GitHub Copilot is at your own risk.
+
 ## Tools
 
 The server exposes **40 tools** grouped into five categories.
