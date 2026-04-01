@@ -1,0 +1,31 @@
+{
+  "servers": {
+    "discord-mcp": {
+      "type": "stdio",
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "${workspaceFolder}",
+        "discord-mcp"
+      ],
+      "env": {
+        "DISCORD_TOKEN": "${input:DISCORD_TOKEN}",
+        "DISCORD_GUILD_ID": "${input:DISCORD_GUILD_ID}"
+      }
+    }
+  },
+  "inputs": [
+    {
+      "id": "DISCORD_TOKEN",
+      "type": "promptString",
+      "description": "Discord Bot Token (from Discord Developer Portal)",
+      "password": true
+    },
+    {
+      "id": "DISCORD_GUILD_ID",
+      "type": "promptString",
+      "description": "Discord Guild (Server) ID"
+    }
+  ]
+}
